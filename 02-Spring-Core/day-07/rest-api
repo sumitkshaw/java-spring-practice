@@ -1,0 +1,16 @@
+@GetMapping("/hello")
+public String hello() {
+    return "Hello World";
+}
+@GetMapping("/users/{id}")
+public String getUser(@PathVariable int id) {
+    return "User ID: " + id;
+}
+@GetMapping("/users")
+public String getUser(@RequestParam String name) {
+    return "User: " + name;
+}
+@PostMapping("/users")
+public User createUser(@RequestBody User user) {
+    return user;
+}
